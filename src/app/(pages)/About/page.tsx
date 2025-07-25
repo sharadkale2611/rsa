@@ -33,7 +33,7 @@ export default function AboutPage() {
                         <div className="overflow-hidden rounded-xl shadow-xl ring-1 ring-gray-900/10">
                             <Image
                                 alt="Prof. Shrikant Bapurao Patil - Founder"
-                                src="/patil_sir_1.jpeg" // Replace with your owner's photo
+                                src="/patil_sir_1.jpg" // Replace with your owner's photo
                                 width={800}
                                 height={1000}
                                 className="w-full object-cover"

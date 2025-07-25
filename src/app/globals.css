@@ -1,9 +1,39 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+    /* Core Colors */
+      --brand-cyan: #dffffe;
+      --brand-red: #d53207;
+      --brand-yellow: #fccd0c;
+      /* --brand-orange: #ff6400;*/
+        --brand-orange: #e05a00;
+      --white: #ffffff;
+      --black: #000000;
+      --gray-100: #f5f5f5;
+      --gray-800: #262626;
+    
+      /* Text Colors */
+      --text-primary: var(--black);
+      --text-secondary: #757575;
+      --text-inverse: var(--white);
+      --text-accent: var(--brand-red);
+      --text-light: rgba(255, 255, 255, 0.9);
+      --text-dark: rgba(0, 0, 0, 0.6);
+    
+      /* Semantic Colors */
+      --primary: var(--brand-red);
+      --secondary: var(--brand-yellow);
+      --accent: var(--brand-orange);
+      --background: var(--brand-cyan);
+      --footer-bg: var(--gray-800);
 }
+
 
 @theme inline {
   --color-background: var(--background);
@@ -24,3 +54,245 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* Optional: Create utility classes for backgrounds */
+.bg-brand-red {
+  background-color: var(--brand-red);
+}
+
+.bg-brand-yellow {
+  background-color: var(--brand-yellow);
+}
+
+.bg-brand-cyan {
+  background-color: var(--brand-cyan);
+}
+
+/* Background Classes */
+.brand-bg-cyan {
+  background-color: var(--brand-cyan);
+}
+
+.brand-bg-red {
+  background-color: var(--brand-red);
+}
+
+.brand-bg-yellow {
+  background-color: var(--brand-yellow);
+}
+
+.brand-bg-orange {
+  background-color: var(--brand-orange);
+}
+
+.brand-bg-white {
+  background-color: var(--white);
+}
+
+.brand-bg-black {
+  background-color: var(--black);
+}
+
+.bg-footer {
+  background-color: var(--footer-bg);
+}
+
+/* Text Color Classes */
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  /* color: var(--text-secondary); */
+  color: var(--color-gray-700);
+}
+
+.text-inverse {
+  color: var(--text-inverse);
+}
+
+.text-accent {
+  color: var(--text-accent);
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+.text-dark {
+  color: var(--text-dark);
+}
+.text-orange {
+  color: var(--brand-orange);
+}
+
+.text-dark-gradient {
+  background: linear-gradient(to right, var(--text-dark), #555);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 1 1px 1px rgb(255, 255, 255);
+}
+
+
+
+.text-brand-yellow {
+  color: var(--brand-yellow);
+}
+
+.no-text-shadow {
+  text-shadow: none;
+}
+
+/* Border Colors */
+.border-brand-yellow {
+  border-color: var(--brand-yellow);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+
+/* Add opacity utilities if not present */
+.border-opacity-20 {
+  --tw-border-opacity: 0.2;
+  border-color: rgba(var(--border-color-rgb), var(--tw-border-opacity));
+}
+
+.btn-orange {
+  /* background-color: var(--brand-orange); */
+  background: linear-gradient(to right, var(--brand-orange), #555);
+  color: var(--text-primary);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 3px var(--text-light);
+}
+
+.btn-orange:hover {
+  background-color: color-mix(in srgb, var(--brand-orange), black 10%);
+  transform: translateY(-1px);
+}
+
+/* Hover States */
+.hover\:text-brand-yellow:hover {
+  color: var(--brand-yellow);
+}
+
+.hover\:text-accent:hover {
+  color: var(--text-accent);
+}
+
+.hover\:text-inverse:hover {
+  color: var(--text-inverse);
+}
+
+/* Opacity Utilities */
+.opacity-90 {
+  opacity: 0.9;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.opacity-10 {
+  opacity: 0.1;
+}
+
+/* Component Classes */
+.hero-badge {
+  background-color: var(--brand-yellow);
+  color: var(--text-primary);
+}
+
+.feature-icon {
+  color: var(--brand-red);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: var(--white);
+    --text-secondary: rgba(255, 255, 255, 0.6);
+    --text-inverse: var(--black);
+    --background: var(--black);
+  }
+}
+
+/* Base Styles */
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Typography */
+.heading-1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.heading-2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.heading-3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--brand-red);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: #b82b06;
+}
+
+.btn-secondary {
+  background-color: var(--brand-yellow);
+  color: var(--black);
+}
+
+.btn-secondary:hover {
+  background-color: #e6b908;
+}
+
+.text-shadow {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-white {
+  text-shadow: 1 1px 3px rgb(255, 255, 255);
+}
+

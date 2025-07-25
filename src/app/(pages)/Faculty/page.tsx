@@ -86,7 +86,8 @@ export default function FacultyPage() {
                                 <Image
                                     alt={faculty.name}
                                     src={faculty.image}
-                                    fill
+                                    width={250}
+                                    height={250}
                                     className="object-cover"
                                 />
                             </div>
