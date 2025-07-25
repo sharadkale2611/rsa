@@ -66,7 +66,7 @@ export default function Stats() {
                             </h2>
 
                             <p className="mt-6 text-2xl leading-8 text-dark-gradient">
-                                Our proven track record speaks for itself. We transform potential into
+                                Our proven track record speaks for itself. We transform potential into 
                                 performance through dedicated mentoring and scientifically designed curriculum.
                             </p>
 
