@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -34,6 +36,19 @@
       --footer-bg: var(--gray-800);
 }
 
+/* globals.css */
+:root,
+[data-theme="light"] {
+  /* Your light theme variables */
+  --background: #ffffff;
+  --foreground: #000000;
+  /* ... other vars ... */
+}
+
+/* Nuclear option: prevent dark mode entirely */
+.dark {
+  display: none !important;
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -42,12 +57,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
@@ -215,14 +230,14 @@ body {
 }
 
 /* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --text-primary: var(--white);
     --text-secondary: rgba(255, 255, 255, 0.6);
     --text-inverse: var(--black);
     --background: var(--black);
   }
-}
+} */
 
 /* Base Styles */
 body {
