@@ -4,7 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
 
     experimental: {
-      caseSensitiveRoutes: false
+      caseSensitiveRoutes: false,
+      optimizeCss: false, // Try disabling if styles break
     }
 };
 

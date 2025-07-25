@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    darkMode: 'media', // or 'class' if toggled via a class
+    // darkMode: 'media', // or 'class' if toggled via a class
+    darkMode: 'class', // or 'class' if toggled via a class
     content: [
         './src/**/*.{js,ts,jsx,tsx,mdx}',
         './app/**/*.{js,ts,jsx,tsx,mdx}', // also add app directory if you're using Next.js App Router
