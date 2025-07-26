@@ -1,3 +1,4 @@
+import { useLang } from "@/utils/useLang";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -20,6 +21,7 @@ interface SocialIconProps {
 }
 
 export default function Footer() {
+    const lang = useLang()
     return (
         <footer className="bg-footer text-inverse pt-4" aria-label="Website footer">
             <div className="container px-6 py-12 mx-auto sm:py-16">
@@ -36,13 +38,12 @@ export default function Footer() {
                                 priority
                             />
                             <h2 className="ml-3 text-xl font-bold">
-                                Revolution Academy
-                                <span className="sr-only">Home</span>
+                                {lang('company_name')}
+                                <span className="sr-only">{lang(['nav','home'])}</span>
                             </h2>
                         </div>
                         <p className="text-sm text-light">
-                            Premier coaching for 11th/12th Science students with specialized
-                            JEE/NEET preparation and board exam excellence.
+                            {lang(['company_tagline1'])}
                         </p>
 
                         {/* Social Media Links */}
@@ -70,7 +71,7 @@ export default function Footer() {
                     {/* Quick Links */}
                     <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-2">
                         <FooterSection
-                            title="Courses"
+                            title={lang(['nav','courses'])}
                             links={[
                                 { href: "/courses/11th-science", text: "11th Science" },
                                 { href: "/courses/12th-science", text: "12th Science" },
@@ -78,32 +79,29 @@ export default function Footer() {
                                 { href: "/courses/neet-crash-course", text: "NEET Crash Course" },
                             ]}
                         />
-
                         <FooterSection
-                            title="Resources"
+                            title={lang(['nav', 'resources'])} 
                             links={[
-                                { href: "/resources/study-materials", text: "Study Materials" },
-                                { href: "/resources/mock-tests", text: "Mock Tests" },
-                                { href: "/resources/doubt-sessions", text: "Doubt Sessions" },
-                                {
-                                    href: "/resources/previous-year-papers",
-                                    text: "Previous Year Papers",
+                                { href: "/resources/study-materials", text: lang(['nav', 'study_materials'])  },
+                                { href: "/resources/mock-tests", text: lang(['nav', 'mock_tests']) },
+                                { href: "/resources/doubt-sessions", text: lang(['nav', 'doubt_sessions']) },
+                                { href: "/resources/previous-year-papers", text: lang(['nav', 'previous_year_papers']),
                                 },
                             ]}
                         />
 
                         <address className="not-italic">
                             <h3 className="text-sm font-semibold tracking-wider text-brand-yellow">
-                                Contact
+                                {lang(['nav', 'contact'])}
                             </h3>
                             <ul className="mt-4 space-y-2">
                                 <li className="text-sm text-light">
-                                    First Floor, Late. Babasaheb Shankarrao Gaikwad Sankul,
+                                    {lang(['address', 'line1'])}
                                     <br />
-                                    Karanjepul, Block. Baramati, Dist. Pune
+                                    {lang(['address', 'line2'])}
                                 </li>
                                 <li className="text-sm text-light">
-                                    Phone: <br />
+                                    {lang(['common', 'phone'])}: <br />
                                     <a
                                         href="tel:+918888401888"
                                         className="hover:text-brand-yellow"
@@ -119,7 +117,7 @@ export default function Footer() {
                                     </a>
                                 </li>
                                 <li className="text-sm text-light">
-                                    Email:{" "}
+                                    {lang(['common', 'email'])}:{" "}
                                     <a
                                         href="mailto:revolutionscienceacademy@gmail.com"
                                         className="hover:text-brand-yellow"

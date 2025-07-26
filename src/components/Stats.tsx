@@ -1,3 +1,4 @@
+import { useLang } from '@/utils/useLang';
 import {
     AcademicCapIcon,
     ClockIcon,
@@ -21,19 +22,20 @@ interface LinkItem {
 }
 
 export default function Stats() {
+    const lang = useLang();
     const links: LinkItem[] = [
-        { id: 'courses', name: 'Our Courses', href: '/courses' },
-        { id: 'materials', name: 'Study Materials', href: '/materials' },
-        { id: 'faculty', name: 'Meet Our Faculty', href: '/faculty' },
+        { id: 'courses', name: lang(['stats', 'our_courses']), href: '/courses' },
+        { id: 'materials', name: lang(['stats', 'study_materials']), href: '/materials' },
+        { id: 'faculty', name: lang(['stats', 'meet_our_faculty']), href: '/faculty' },
     ];
-
+   
     const stats: Stat[] = [
-        { id: 'students', name: 'Students Enrolled', value: '1200+', icon: UserGroupIcon },
-        { id: 'qualifiers', name: 'JEE/NEET Qualifiers', value: '95%', icon: TrophyIcon },
-        { id: 'experience', name: 'Faculty Experience', value: '15+ Years', icon: AcademicCapIcon },
-        { id: 'hours', name: 'Weekly Study Hours', value: '30+', icon: ClockIcon },
+        { id: 'students', name: lang(['stats', 'students_enrolled']), value: '1200+', icon: UserGroupIcon },
+        { id: 'qualifiers', name: lang(['stats', 'jee_neet_qualifiers']), value: '95%', icon: TrophyIcon },
+        { id: 'experience', name: lang(['stats', 'faculty_experience']), value: '15+ Years', icon: AcademicCapIcon },
+        { id: 'hours', name: lang(['stats', 'weekly_study_hours']), value: '30+', icon: ClockIcon },
     ];
-
+    
     return (
         <section
             aria-labelledby="stats-heading"
@@ -41,8 +43,7 @@ export default function Stats() {
         >
             <Image
                 alt="Diverse group of students studying together"
-                height={800}
-                width={1200}
+                fill
                 src="/students1.png"
                 className="absolute inset-0 -z-10 h-full w-full object-cover object-center opacity-20"
                 priority
@@ -59,15 +60,14 @@ export default function Stats() {
                     <div className="lg:pr-8">
                         <div className="lg:max-w-lg">
                             <h2 id="stats-heading" className="heading-1 text-white">
-                                Building{' '}
+                                {lang(['stats','title_part1'])}{' '}
                                 <span className="text-brand-yellow drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
-                                    Academic Excellence
+                                    {lang(['stats', 'title_part2'])}
                                 </span>
                             </h2>
 
                             <p className="mt-6 text-2xl leading-8 text-dark-gradient">
-                                Our proven track record speaks for itself. We transform potential into 
-                                performance through dedicated mentoring and scientifically designed curriculum.
+                                {lang(['stats', 'subtitle'])}
                             </p>
 
                             <nav aria-label="Quick links" className="mt-10 max-w-2xl lg:max-w-none">
@@ -126,7 +126,7 @@ export default function Stats() {
                             </div>
                             <figcaption className="p-4 bg-gray-900 rounded-b-lg">
                                 <p className="text-sm font-medium text-white">
-                                    Watch our classroom experience and teaching methodology
+                                    {lang(['stats', 'youtube_title'])}
                                 </p>
                             </figcaption>
                         </figure>

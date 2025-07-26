@@ -1,3 +1,4 @@
+import { useLang } from '@/utils/useLang';
 import { BookOpenIcon, AcademicCapIcon, ChartBarIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image'
 
@@ -9,23 +10,24 @@ interface Feature {
 }
 
 export default function Features() {
+    const lang = useLang();
     const features: Feature[] = [
         {
             id: 'curriculum',
-            name: 'Comprehensive Curriculum',
-            description: 'Structured syllabus covering all JEE/NEET and board exam topics with concept clarity as the primary focus.',
+            name: lang(['features','feature_1']),
+            description: lang(['features', 'feature_1_details']),
             icon: BookOpenIcon,
         },
         {
             id: 'faculty',
-            name: 'Expert Faculty',
-            description: 'Learn from IIT/NIT alumni and experienced educators who specialize in competitive exam preparation.',
+            name: lang(['features', 'feature_2']),
+            description: lang(['features', 'feature_2_details']),
             icon: AcademicCapIcon,
         },
         {
             id: 'results',
-            name: 'Result-Oriented Approach',
-            description: 'Proven track record with 85%+ of our students securing ranks in top engineering/medical colleges.',
+            name: lang(['features', 'feature_3']),
+            description: lang(['features', 'feature_3_details']),
             icon: ChartBarIcon,
         },
     ]
@@ -40,14 +42,13 @@ export default function Features() {
                     <div className="lg:pt-4 lg:pr-8">
                         <div className="lg:max-w-lg">
                             <h2 className="text-base font-bold text-primary text-shadow-white" id="features-subheading">
-                                Why Choose Us
+                                {lang(['features','why_choose_us'])}
                             </h2>
                             <h3 id="features-heading" className="mt-2 text-4xl font-semibold tracking-tight text-primary sm:text-5xl">
-                                Transforming Students Into <span className="text-accent">Top Performers</span>
+                                {lang(['features', 'title_1'])} <span className="text-accent">{lang(['features', 'title_2'])}</span>
                             </h3>
                             <p className="mt-6 text-lg text-secondary">
-                                Our scientifically designed program bridges the gap between school education and competitive exam
-                                requirements, ensuring holistic development.
+                                {lang(['features','subtitle'])}
                             </p>
 
                             <ul className="mt-10 max-w-xl space-y-8 text-base text-secondary lg:max-w-none">
@@ -58,9 +59,9 @@ export default function Features() {
                                                 aria-hidden="true"
                                                 className="absolute top-1 left-1 h-5 w-5 text-accent"
                                             />
-                                            {feature.name}
+                                            {feature.name} :
                                         </h4>
-                                        <p className="inline">{feature.description}</p>
+                                        <p className="inline pl-1">{feature.description}</p>
                                     </li>
                                 ))}
                             </ul>

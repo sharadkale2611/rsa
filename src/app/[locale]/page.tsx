@@ -5,15 +5,16 @@ import Hero1 from "@/components/Hero1";
 import Stats from "@/components/Stats";
 import Testimonials from "@/components/Testimonials";
 
-export default function Home() {
+export default function HomePage() {
+
   return (
     <>
       <Header />
-      <Hero1/>
-      <Features/>
-      <Stats/>
-      <Testimonials/>
-      <Footer/>
+      <Hero1 />
+      <Features />
+      <Stats />
+      <Testimonials />
+      <Footer />
     </>
   );
 }

@@ -70,6 +70,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+:lang(mr) {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
 
 /* Optional: Create utility classes for backgrounds */
 .bg-brand-red {

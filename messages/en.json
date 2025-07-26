@@ -1,0 +1,84 @@
+{
+   "company_name": "Revolution Academy",
+   "company_tagline1":"Premier coaching for 11th/12th Science students with specialized JEE/NEET preparation and board exam excellence.",
+   "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "courses": "Courses",
+      "faculty": "Faculty",
+      "events": "Events",
+      "contact": "Contact",
+      "resources": "Resources",
+      "study_materials": "Study Materials",
+      "mock_tests": "Mock Tests",
+      "doubt_sessions": "Doubt Sessions",
+      "previous_year_papers": "Previous Year Papers"
+   },
+   "common":{
+      "phone": "Phone",
+      "mobile_number":"Mobile Number",
+      "email": "Email"
+   },
+   "address":{
+      "line1": "First Floor, Late. Babasaheb Shankarrao Gaikwad Sankul,",
+      "line2": "SomeshwarNagar(Karanjepul), Block. Baramati, Dist. Pune"
+   },
+   "hero": {
+      "heading_part1": "Building",
+      "heading_part2": "Future Scholars",
+      "heading_part3": "for JEE/NEET",
+      "quote_part1": "Success is where preparation and opportunity meet.",
+      "quote_part1_owner": "Bobby Unser",
+      "description_line1": "Our intensive programs for 11th & 12th Science students combine",
+      "description_line2": "with",
+      "conceptual_clarity": "conceptual clarity",
+      "competitive_prep": "competitive exam preparation"
+   },
+   "register_now": "Register Now",
+   "view_last_year_result": "View last year result",
+
+   "features":{
+      "why_choose_us": "Why choose us?",
+      "title_1": "Transforming Students Into",
+      "title_2": "Top Performers",
+      "subtitle": "Our scientifically designed program bridges the gap between school education and competitive exam requirements, ensuring holistic development.",
+      "feature_1": "Comprehensive Curriculum",
+      "feature_1_details": "Structured syllabus covering all JEE/NEET and board exam topics with concept clarity as the primary focus.",
+      "feature_2": "Expert Faculty",
+      "feature_2_details": "Learn from IIT/NIT alumni and experienced educators who specialize in competitive exam preparation.",
+      "feature_3": "Result-Oriented Approach",
+      "feature_3_details": "Proven track record with 85%+ of our students securing ranks in top engineering/medical colleges."
+   },
+   "stats":{
+      "title_part1": "Building",
+      "title_part2": "Academic Excellence",
+      "subtitle": "Our proven track record speaks for itself. We transform potential into performance through dedicated mentoring and scientifically designed curriculum.",
+
+      "our_courses": "Our Courses",
+      "study_materials": "Study Materials",
+      "meet_our_faculty": "Meet Our Faculty",
+
+      "students_enrolled": "Students Enrolled",
+      "jee_neet_qualifiers": "JEE/NEET Qualifiers",
+      "faculty_experience": "Faculty Experience",
+      "weekly_study_hours": "Weekly Study Hours",
+
+      "youtube_title": "Watch our classroom experience and teaching methodology"
+   },
+   "testimonials":{
+      "title": "What Our Students / Parents Say",
+      "student1": {
+         "name": "Aarav Sharma",
+         "message": "Revolution Academy helped me build a solid foundation in Physics and Chemistry. The faculty is amazing and always supportive!"
+      },
+      "student2": {
+         "name": "Sneha Patil",
+         "message": "I was struggling with Math, but the practice problems and doubt sessions turned everything around. Highly recommend!"
+      },
+      "student3": {
+         "name": "Rohan Deshmukh",
+         "message": "I loved the structured curriculum and regular progress tests. It prepared me well for the board and competitive exams."
+      }
+   }
+
+}

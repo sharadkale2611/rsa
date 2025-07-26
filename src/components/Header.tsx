@@ -4,18 +4,26 @@ import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
+import { useLang } from '@/utils/useLang'
+import LanguageSwitcher from './LanguageSwitcher'
 import Link from 'next/link'
+// import { Link } from '@/i18n/navigation'
 
-const navigation = [
-    { name: 'Home', href: '/', current: false },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Courses', href: '/courses', current: false },
-    { name: 'Faculty', href: '/faculty', current: false },
-    { name: 'Results', href: '/results', current: false },
-]
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    
+    const lang = useLang();
+
+    const navigation = [
+        { name: lang(['nav','home']), href: '/', current: false },
+        { name: lang(['nav', 'about']), href: '/about', current: false },
+        { name: lang(['nav','courses']), href: '/courses', current: false },
+        { name: lang(['nav','faculty']), href: '/faculty', current: false },
+        { name: lang(['nav', 'events']), href: '/events', current: false },
+        { name: lang(['nav', 'contact']), href: '/contact', current: false },
+    ]
+
 
     return (
         <>
@@ -32,7 +40,7 @@ export default function Header() {
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     <Image
-                                        alt="Revolution Academy logo"
+                                        alt={lang(['company_name'])}
                                         width={50}
                                         height={50}
                                         src="/logo.png"
@@ -40,8 +48,8 @@ export default function Header() {
                                         priority
                                     />
                                     <span className="ml-2 text-xl font-bold text-accent">
-                                        Revolution Academy
-                                        <span className="sr-only">Home</span>
+                                        {lang(['company_name'])}
+                                        <span className="sr-only">{lang('nav.home')}</span>
                                     </span>
                                 </Link>
                             </div>
@@ -63,13 +71,7 @@ export default function Header() {
 
                         {/* Contact CTA */}
                         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                            <Link
-                                href="/contact"
-                                className="text-sm font-semibold leading-6 text-accent hover:text-accent/90 transition-colors flex items-center gap-1"
-                                aria-label="Contact us"
-                            >
-                                Contact <span aria-hidden="true">→</span>
-                            </Link>
+                            <LanguageSwitcher/>
                         </div>
 
                         {/* Mobile Menu Button */}
@@ -144,13 +146,7 @@ export default function Header() {
                                     ))}
                                 </div>
                                 <div className="py-6">
-                                    <Link
-                                        href="/contact"
-                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-accent hover:bg-primary/5"
-                                        onClick={() => setMobileMenuOpen(false)}
-                                    >
-                                        Contact Us
-                                    </Link>
+                                    <LanguageSwitcher />
                                 </div>
                             </div>
                         </div>
