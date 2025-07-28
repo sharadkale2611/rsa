@@ -17,7 +17,7 @@ export default function Header() {
 
     const navigation = [
         { name: lang(['nav','home']), href: '/', current: false },
-        { name: lang(['nav', 'about']), href: '/about', current: false },
+        { name: lang(['nav', 'about']), href: '/About', current: false },
         { name: lang(['nav','courses']), href: '/courses', current: false },
         { name: lang(['nav','faculty']), href: '/faculty', current: false },
         { name: lang(['nav', 'events']), href: '/events', current: false },
