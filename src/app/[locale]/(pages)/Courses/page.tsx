@@ -1,4 +1,6 @@
-import { 
+import { Link } from '@/i18n/navigation'
+import { useLang } from '@/utils/useLang'
+import {
     BookOpenIcon,
     CalculatorIcon,
     ChartBarIcon,
@@ -7,84 +9,88 @@ import {
 } from '@heroicons/react/20/solid'
 import Image from 'next/image'
 
-const courses = [
-    {
-        name: '11th Science Foundation',
-        description: 'Build strong fundamentals in Physics, Chemistry, and Mathematics with our CBSE/State Board aligned curriculum.',
-        icon: BookOpenIcon,
-        features: [
-            'Comprehensive theory sessions',
-            'Weekly doubt-clearing classes',
-            'Monthly progress tests',
-            '200+ practice problems/month'
-        ],
-        duration: '1 Year Program',
-        highlight: 'JEE/NEET Foundation',
-        image: '/11th/11th-foundation.png'
-    },
-    {
-        name: '12th Science Intensive',
-        description: 'Complete syllabus coverage with competitive exam preparation for board excellence and JEE/NEET success.',
-        icon: LightningBoltIcon,
-        features: [
-            'Dual preparation strategy',
-            'Chapter-wise test series',
-            '10+ full syllabus mock tests',
-            'Exam temperament training'
-        ],
-        duration: '1 Year Program',
-        highlight: '95%+ Board Results',
-        image: '/12th/12th-foundation.png'
-    },
-    {
-        name: 'JEE Mains & Advanced',
-        description: 'Specialized program for engineering aspirants with advanced problem-solving techniques and test strategies.',
-        icon: CalculatorIcon,
-        features: [
-            'IIT alumni mentors',
-            'Daily practice problems',
-            '15+ mock test series',
-            'Rank improvement program'
-        ],
-        duration: '2 Year/1 Year Options',
-        highlight: '1000+ Selections',
-        image: '/other/jee.png'
-    },
-    {
-        name: 'NEET Preparation',
-        description: 'Comprehensive medical entrance coaching with NCERT focus and advanced biology concepts.',
-        icon: FlaskIcon,
-        features: [
-            'Daily MCQ practice',
-            'Diagram-based learning',
-            '5,000+ curated questions',
-            'Previous year paper analysis'
-        ],
-        duration: '2 Year/1 Year Options',
-        highlight: '600+ MBBS Selections',
-        image: '/other/neet_preperation.png'        
-    },
-    {
-        name: 'Board Exam Special',
-        description: 'Crash course for 12th board exams with guaranteed score improvement techniques.',
-        icon: ChartBarIcon,
-        features: [
-            'Chapter-wise revision',
-            'Important question banks',
-            'Answer writing workshops',
-            '5 full syllabus tests'
-        ],
-        duration: '3 Months Program',
-        highlight: 'Average 25% Score Improvement',
-        image: '/other/board_exam.jpg'
-    }
-]
 
 export default function CoursesPage() {
+
+    const lang = useLang()
+    
+    const courses = [
+        {
+            name: lang(['courses', '11th_science']),
+            description: lang(['courses', '11th_science_description']),
+            icon: BookOpenIcon,
+            features: [
+                lang(['courses', '11th_science_featur_1']),
+                lang(['courses', '11th_science_featur_2']),
+                lang(['courses', '11th_science_featur_3']),
+                lang(['courses', '11th_science_featur_4'])
+            ],
+            duration: lang(['courses', '11th_science_duration']),
+            highlight: lang(['courses', '11th_science_highlight']),
+            image: '/11th/11th-foundation.png'
+        },
+        {
+            name: lang(['courses', '12th_science']),
+            description: lang(['courses', '12th_science_description']),
+            icon: LightningBoltIcon,
+            features: [
+                lang(['courses', '12th_science_featur_1']),
+                lang(['courses', '12th_science_featur_2']),
+                lang(['courses', '12th_science_featur_3']),
+                lang(['courses', '12th_science_featur_4'])
+            ],
+            duration: lang(['courses', '12th_science_duration']),
+            highlight: lang(['courses', '12th_science_highlight']),
+            image: '/12th/12th-foundation.png'
+        },
+        {
+            name: lang(['courses', 'jee_main']),
+            description: lang(['courses', 'jee_main_description']),
+            icon: CalculatorIcon,
+            features: [
+                lang(['courses', 'jee_main_featur_1']),
+                lang(['courses', 'jee_main_featur_2']),
+                lang(['courses', 'jee_main_featur_3']),
+                lang(['courses', 'jee_main_featur_4'])
+            ],
+            duration: lang(['courses', 'jee_main_duration']),
+            highlight: lang(['courses', 'jee_main_highlight']),
+            image: '/other/jee.png'
+        },
+        {
+            name: lang(['courses', 'neet']),
+            description: lang(['courses', 'neet_description']),
+            icon: FlaskIcon,
+            features: [
+                lang(['courses', 'neet_featur_1']),
+                lang(['courses', 'neet_featur_2']),
+                lang(['courses', 'neet_featur_3']),
+                lang(['courses', 'neet_featur_4'])
+            ],
+            duration: lang(['courses', 'neet_duration']),
+            highlight: lang(['courses', 'neet_highlight']),
+            image: '/other/neet_preperation.png'
+        },
+        {
+            name: lang(['courses', 'board']),
+            description: lang(['courses', 'board_description']),
+            icon: ChartBarIcon,
+            features: [
+                lang(['courses', 'board_featur_1']),
+                lang(['courses', 'board_featur_2']),
+                lang(['courses', 'board_featur_3']),
+                lang(['courses', 'board_featur_4'])
+            ],
+            duration: lang(['courses', 'board_duration']),
+            highlight: lang(['courses', 'board_highlight']),
+            image: '/other/board_exam.jpg'
+        }
+    ]
+
     return (
-        <div className="bg-[#dffffe]">
+        <div className="bg-brand-cyan">
             {/* Hero Section */}
-            <div className="relative bg-[#FF6400]">
+            <div className="relative bg-black/90" >
                 <div className="absolute inset-0">
                     <Image
                         alt="Students in classroom"
@@ -95,12 +101,11 @@ export default function CoursesPage() {
                 </div>
                 <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
                     <div className="text-center">
-                        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                            Our <span className="text-[#fccd0c]">Academic Programs</span>
+                        <h1 className="text-4xl font-bold tracking-tight text-accent text-shadow sm:text-6xl text-shadow">
+                            {lang(['courses', 'hero_title_part1'])}{' '}
+                            <span className="text-brand-yellow text-shadow">{lang(['courses', 'hero_title_part2'])}</span>
                         </h1>
-                        <p className="mt-6 text-lg leading-8 text-white/90">
-                            Scientifically designed courses that bridge school education and competitive exam requirements
-                        </p>
+                        <p className="mt-6 text-lg leading-8 text-white text-shadow">{lang(['courses', 'hero_subtitle'])}</p>
                     </div>
                 </div>
             </div>
@@ -108,12 +113,10 @@ export default function CoursesPage() {
             {/* Course Grid */}
             <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        Transformative Learning Experiences
+                    <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+                        {lang(['courses', 'main_heading'])}
                     </h2>
-                    <p className="mt-6 text-lg leading-8 text-gray-700">
-                        Choose the perfect program for your academic goals with our structured pathways
-                    </p>
+                    <p className="mt-6 text-lg leading-8 text-secondary">{lang(['courses', 'main_sub_heading'])}</p>
                 </div>
 
                 <div className="mt-16 space-y-20">
@@ -121,27 +124,27 @@ export default function CoursesPage() {
                         <div key={course.name} className="flex flex-col gap-16 lg:flex-row lg:items-center">
                             <div className="lg:w-1/2">
                                 <div className="flex items-center">
-                                    <course.icon className="h-8 w-8 text-[#d53207]" />
-                                    <h3 className="ml-3 text-2xl font-bold tracking-tight text-gray-900">
+                                    <course.icon className="h-8 w-8 text-primary" />
+                                    <h3 className="ml-3 text-2xl font-bold tracking-tight text-primary">
                                         {course.name}
                                     </h3>
                                 </div>
-                                <p className="mt-4 text-gray-700">{course.description}</p>
+                                <p className="mt-4 text-secondary">{course.description}</p>
 
                                 <div className="mt-6">
-                                    <h4 className="text-sm font-semibold text-[#d53207]">PROGRAM HIGHLIGHT</h4>
-                                    <p className="mt-2 font-medium text-gray-900">{course.highlight}</p>
+                                    <h4 className="text-sm font-semibold text-accent">{lang(['courses', 'program_highlight'])}</h4>
+                                    <p className="mt-2 font-medium text-primary">{course.highlight}</p>
                                 </div>
 
                                 <div className="mt-8">
-                                    <h4 className="text-sm font-semibold text-[#d53207]">KEY FEATURES</h4>
+                                    <h4 className="text-sm font-semibold text-accent">KEY FEATURES</h4>
                                     <ul className="mt-4 space-y-3">
                                         {course.features.map((feature) => (
                                             <li key={feature} className="flex">
-                                                <svg className="h-6 w-6 flex-none text-[#fccd0c]" viewBox="0 0 20 20" fill="currentColor">
+                                                <svg className="h-6 w-6 flex-none text-brand-yellow" viewBox="0 0 20 20" fill="currentColor">
                                                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                                                 </svg>
-                                                <span className="ml-3 text-gray-700">{feature}</span>
+                                                <span className="ml-3 text-secondary">{feature}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -150,12 +153,12 @@ export default function CoursesPage() {
                                 <div className="mt-8 flex items-center gap-x-4">
                                     <a
                                         href="#enquiry"
-                                        className="rounded-md bg-[#d53207] px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#a32805] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d53207]"
+                                        className="rounded-md brand-bg-red px-4 py-2.5 text-sm font-semibold text-inverse shadow-sm hover:bg-opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                                     >
-                                        Enquire Now
+                                        {lang(['courses', 'enquire_now'])}
                                     </a>
-                                    <a href="#details" className="text-sm font-semibold text-[#d53207] hover:text-[#a32805]">
-                                        Detailed syllabus <span aria-hidden="true">→</span>
+                                    <a href="#details" className="text-sm font-semibold text-secondary hover:text-opacity-80">
+                                        {lang(['courses', 'detailed_syllabus'])} <span aria-hidden="true">→</span>
                                     </a>
                                 </div>
                             </div>
@@ -170,7 +173,7 @@ export default function CoursesPage() {
                                         className="w-full object-cover"
                                     />
                                 </div>
-                                <p className="mt-4 text-center text-sm text-gray-600">{course.duration}</p>
+                                <p className="mt-4 text-center text-sm text-secondary">{course.duration}</p>
                             </div>
                         </div>
                     ))}
@@ -178,24 +181,22 @@ export default function CoursesPage() {
             </div>
 
             {/* Batch Schedule CTA */}
-            <div className="bg-[#fccd0c] py-16">
+            <div className="bg-brand-yellow py-16">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl text-center">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                            Ready to begin your journey?
-                        </h2>
-                        <p className="mt-6 text-lg leading-8 text-gray-800">
-                            Download our complete batch schedule and fee structure
+                        <h1 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+                            {lang(['courses', 'hero2_title'])}
+                        </h1>
+                        <p className="mt-6 text-lg leading-8 text-secondary">
+                            {lang(['courses', 'hero2_subtitle'])}
                         </p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
-                            <a
+                            <Link
                                 href="#download"
-                                className="rounded-md bg-[#d53207] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#a32805] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d53207]"
-                            >
-                                Download Brochure
-                            </a>
-                            <a href="#contact" className="text-sm font-semibold text-gray-900">
-                                Speak to counselor <span aria-hidden="true">→</span>
+                                className="rounded-md px-6 py-3 text-sm font-semibold focus-visible:outline hover:text-accent shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                            >{lang(['courses', 'hero2_download'])}</Link>
+                            <a href="#contact" className="text-sm font-semibold text-gray hover:text-opacity-80">
+                                {lang(['courses', 'hero2_speak_to_counselor'])} <span aria-hidden="true">→</span>
                             </a>
                         </div>
                     </div>
@@ -203,4 +204,5 @@ export default function CoursesPage() {
             </div>
         </div>
     )
+
 }

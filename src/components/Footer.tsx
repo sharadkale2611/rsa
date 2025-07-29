@@ -42,7 +42,7 @@ export default function Footer() {
                                 <span className="sr-only">{lang(['nav','home'])}</span>
                             </h2>
                         </div>
-                        <p className="text-sm text-light">
+                        <p className="text-sm text-white">
                             {lang(['company_tagline1'])}
                         </p>
 
@@ -73,10 +73,10 @@ export default function Footer() {
                         <FooterSection
                             title={lang(['nav','courses'])}
                             links={[
-                                { href: "/courses/11th-science", text: "11th Science" },
-                                { href: "/courses/12th-science", text: "12th Science" },
-                                { href: "/courses/jee-foundation", text: "JEE Foundation" },
-                                { href: "/courses/neet-crash-course", text: "NEET Crash Course" },
+                                { href: "/courses/11th-science", text: lang(['nav','11th_science']) },
+                                { href: "/courses/12th-science", text: lang(['nav', '12th_science']) },
+                                { href: "/courses/jee-foundation", text: lang(['nav', 'jee_foundation']) },
+                                { href: "/courses/neet-crash-course", text: lang(['nav', 'neet_crash_course']) },
                             ]}
                         />
                         <FooterSection
@@ -95,12 +95,12 @@ export default function Footer() {
                                 {lang(['nav', 'contact'])}
                             </h3>
                             <ul className="mt-4 space-y-2">
-                                <li className="text-sm text-light">
+                                <li className="text-sm text-white">
                                     {lang(['address', 'line1'])}
                                     <br />
                                     {lang(['address', 'line2'])}
                                 </li>
-                                <li className="text-sm text-light">
+                                <li className="text-sm text-white">
                                     {lang(['common', 'phone'])}: <br />
                                     <a
                                         href="tel:+918888401888"
@@ -116,7 +116,7 @@ export default function Footer() {
                                         +91 7035361414
                                     </a>
                                 </li>
-                                <li className="text-sm text-light">
+                                <li className="text-sm text-white">
                                     {lang(['common', 'email'])}:{" "}
                                     <a
                                         href="mailto:revolutionscienceacademy@gmail.com"
@@ -132,7 +132,7 @@ export default function Footer() {
 
                 {/* Copyright */}
                 <div className="mt-12 border-t border-white/10 pt-8">
-                    <p className="text-xs text-light/60">
+                    <p className="text-xs text-white/60">
                         &copy; {new Date().getFullYear()} Revolution Academy. All rights
                         reserved.
                         <span className="block sm:inline"> Designed for future scholars.</span>
@@ -154,7 +154,7 @@ function FooterSection({ title, links }: FooterSectionProps) {
                     <li key={link.href}>
                         <Link
                             href={link.href}
-                            className="text-sm text-light hover:text-brand-yellow"
+                            className="text-sm text-white hover:text-brand-yellow"
                         >
                             {link.text}
                         </Link>

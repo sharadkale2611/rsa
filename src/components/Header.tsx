@@ -18,10 +18,10 @@ export default function Header() {
     const navigation = [
         { name: lang(['nav','home']), href: '/', current: false },
         { name: lang(['nav', 'about']), href: '/About', current: false },
-        { name: lang(['nav','courses']), href: '/courses', current: false },
-        { name: lang(['nav','faculty']), href: '/faculty', current: false },
-        { name: lang(['nav', 'events']), href: '/events', current: false },
-        { name: lang(['nav', 'contact']), href: '/contact', current: false },
+        { name: lang(['nav','courses']), href: '/Courses', current: false },
+        { name: lang(['nav','faculty']), href: '/Faculty', current: false },
+        { name: lang(['nav', 'events']), href: '/Events', current: false },
+        { name: lang(['nav', 'contact']), href: '/Contact', current: false },
     ]
 
 
