@@ -173,5 +173,102 @@
       "board_featur_4": "5 full syllabus tests",
       "board_duration": "3 Months Program",
       "board_highlight": "Average 25% Score Improvement"
-   }
+   },
+
+   "faculty": {
+      "hero_image_alt": "Faculty members teaching students",
+      "hero_title_part1": "Meet Our",
+      "hero_title_part2": "Expert Faculty",
+      "hero_subtitle": "Learn from the best minds in science education with proven track records",
+      "section_title": "Distinguished Educators",
+      "section_description": "Our faculty combines academic excellence with years of teaching experience",
+      "achievements_title": "Key Achievements",
+      "philosophy_title": "Our Teaching Philosophy",
+      "philosophy_description": "Proven methodologies that deliver exceptional results year after year",
+
+      "faculty_member1_name": "Dr. Rajesh Kumar",
+      "faculty_member1_role": "Physics Department Head",
+      "faculty_member1_qualification": "Ph.D. in Physics, IIT Bombay",
+      "faculty_member1_experience": "18+ years experience",
+      "faculty_member1_specialization": "Electrodynamics & Modern Physics",
+      "faculty_member1_achievement1": "100+ JEE Advanced qualifiers",
+      "faculty_member1_achievement2": "Gold Medalist in National Physics Olympiad",
+      "faculty_member1_achievement3": "Visiting Professor at IISc",
+
+      "faculty_member2_name": "Prof. Meena Sharma",
+      "faculty_member2_role": "Chemistry Mentor",
+      "faculty_member2_qualification": "M.Sc. Chemistry, BITS Pilani",
+      "faculty_member2_experience": "15 years experience",
+      "faculty_member2_specialization": "Organic Chemistry",
+      "faculty_member2_achievement1": "95% students score 90+ in Boards",
+      "faculty_member2_achievement2": "NEET Chemistry expert",
+      "faculty_member2_achievement3": "Developed \"Reaction Maps\" technique",
+
+      "faculty_member3_name": "Dr. Amit Patel",
+      "faculty_member3_role": "Mathematics Professor",
+      "faculty_member3_qualification": "Ph.D. Mathematics, ISI Kolkata",
+      "faculty_member3_experience": "12 years experience",
+      "faculty_member3_specialization": "Calculus & Algebra",
+      "faculty_member3_achievement1": "Created Maths Shortcut Techniques",
+      "faculty_member3_achievement2": "Mentored AIR 1 in 2022",
+      "faculty_member3_achievement3": "JEE Advanced question paper analyst",
+
+      "faculty_member4_name": "Prof. Shital Mishra",
+      "faculty_member4_role": "Maths Mentor",
+      "faculty_member4_qualification": "M.Sc. Math, BITS Pilani",
+      "faculty_member4_experience": "7 years experience",
+      "faculty_member4_specialization": "Mathematics and Statistics",
+      "faculty_member4_achievement1": "91% students score 91+ in Boards",
+      "faculty_member4_achievement2": "Developed \"Reaction Maps\" technique",
+
+      "philosophy_feature1_name": "Concept Clarity",
+      "philosophy_feature1_description": "Building strong fundamentals before problem-solving",
+      "philosophy_feature2_name": "Personalized Attention",
+      "philosophy_feature2_description": "Small batch sizes with individual mentoring",
+      "philosophy_feature3_name": "Exam Excellence",
+      "philosophy_feature3_description": "Optimized for board and competitive exams"
+   },
+   "contacts":{
+      "hero_title": "Contact",
+      "hero_span": "Academic Programs",
+      "hero_subtitle": "We're here to answer your questions and guide your academic journey",
+      "section_title": "Get in touch",
+      "section_description": "Have questions about our programs? Want to schedule a campus visit?",
+      "address_title": "Our Campus",
+      "address_line1": "First Floor, Late. Babasaheb Shankarrao Gaikwad Sankul,",
+      "address_line2": "Karanjepul, Baramati, Pune, India",
+      "phone_title": "Phone",
+      "phone_admissions": "Admissions: +91 7035361414",
+      "phone_admin": "Administration: +91 8888401888",
+      "email_title": "Email",
+      "email_admissions": "Admissions: admissions@revolutionacademy.com",
+      "email_general": "General: revolutionscienceacademy@gmail.com",
+      "hours_title": "Office Hours",
+      "hours_weekday": "Monday – Saturday: 8:00 AM – 6:00 PM",
+      "hours_sunday": "Sunday: 10:00 AM – 2:00 PM",
+      "form_name": "Name",
+      "form_phone": "Phone",
+      "form_email": "Email",
+      "form_message": "Message",
+      "form_submit": "Send Message",
+      "cta_title": "Visit our campus",
+      "cta_subtitle": "Schedule a personal tour to experience our facilities",
+      "cta_button1": "Book Campus Tour",
+      "cta_button2": "Call Now"
+   },
+  "events": {
+    "banner_alt": "Event banner background",
+    "heading": "Our",
+    "highlight": "Events",
+    "subheading": "Explore moments from our academic, cultural, and motivation events",
+    "categories": {
+      "academic": "Academic",
+      "cultural": "Cultural",
+      "motivation": "Motivation"
+    },
+    "view_image": "View full size image",
+    "event_image_alt": "Event image",
+    "full_image_alt": "Full event image"
+  }
+
 }

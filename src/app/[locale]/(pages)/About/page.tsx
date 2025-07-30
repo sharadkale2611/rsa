@@ -20,7 +20,7 @@ export default function AboutPage() {
                     <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl text-shadow-white">
                         {lang(['about', 'hero_title_part1'])} <span className="text-accent">{lang(['about', 'hero_title_part2'])}</span>
                     </h1>
-                    <p className="mt-6 text-lg leading-8 text-brand-yellow  text-shadow-white">
+                    <p className="mt-6 text-lg leading-8 text-brand-yellow  ">
                         {lang(['about', 'subtitle'])}
                     </p>
                 </div>
