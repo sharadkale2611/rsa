@@ -9,7 +9,7 @@ import { useLang } from '@/utils/useLang'
 const categories = [
     {
         name: 'Academic',
-        images: ['/events/academic1.jpeg', '/events/academic2.jpeg', '/events/academic3.jpeg'],
+        images: ['/events/academic1.jpeg', '/events/academic2.jpeg', '/events/academic3.jpeg', '/events/academic1.jpeg', '/events/academic2.jpeg', '/events/academic3.jpeg', '/events/academic1.jpeg', '/events/academic2.jpeg', '/events/academic3.jpeg'],
     },
     {
         name: 'Cultural',
